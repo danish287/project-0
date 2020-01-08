@@ -3,8 +3,29 @@ package main
 import "fmt"
 
 //learned init and main etc.
-// possibly thinking about doing notetaking app but have no idea where to begin
-//testing ssh part 2
+//1. mvp 2. restructuring
+
+//get user input from user to
+var zodiac [12]string
+
+func init() {
+	zodiac = [12]string{
+		"aquarius",
+		"pices",
+		"aries",
+		"taurus",
+		"gemini",
+		"cancer",
+		"leo",
+		"virgo",
+		"libra",
+		"scorpio",
+		"sagittarius",
+		"capricorn",
+	}
+
+}
+
 func main() {
-	fmt.Println("I have no idea what my porject is going to be about")
+	fmt.Println(zodiac[0])
 }
