@@ -1,11 +1,9 @@
 package main
 
-import (
-	"flag"
-)
+import "flag"
 
 //learned init and main etc.
-//1. mvp 2. restructuring
+//1. mvp 2. restructuring hello
 
 //get user input from user of zodiac sign
 //get user input for love, career, or money
