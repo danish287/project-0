@@ -16,20 +16,9 @@ var zodiac [12]string
 var userZodiac string
 
 func init() {
-	zodiac = [12]string{
-		"aquarius",
-		"pices",
-		"aries",
-		"taurus",
-		"gemini",
-		"cancer",
-		"leo",
-		"virgo",
-		"libra",
-		"scorpio",
-		"sagittarius",
-		"capricorn",
-	}
+	// zodiac = [12]string{
+
+	// }
 
 	//flag.String(&userZodiac, "", "get user zodiac")
 	temp := flag.Arg(0)
