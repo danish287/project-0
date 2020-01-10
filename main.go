@@ -1,8 +1,9 @@
 package main
 
-import "flag"
-
-//"github.com/danish287/project-0/shaker"
+import (
+	"flag"
+	//"github.com/danish287/project-0/shaker"
+)
 
 //learned init and main etc.
 //1. mvp 2. restructuring hello
