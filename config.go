@@ -1,23 +1,12 @@
 package main
 
-import (
-	"bufio"
-	"log"
-	"os"
-)
+import "flag"
 
-var zodiacSigns []string
+//Horoscope stores name of zodiac
+var Horoscope string
 
 func init() {
-	file, err := os.Open("config.txt")
-	if err != nil {
-		log.Fatal(err)
-	}
+	flag.StringVar(&Horoscope, "Horoscope", "EMPTY", "name of the zodiac sign")
+	flag.Parse()
 
-	reader := bufio.NewScanner(file)
-
-	for reader.Scan() {
-
-		zodiacSigns = append(zodiacSigns, reader.Text())
-	}
 }

@@ -1,0 +1,8 @@
+{
+    "aquarius" : [
+        { 
+            "general": ["https://horoscope.com/us/horoscopes/general/horoscope-general-daily-today.aspx?sign=11", "https://horoscope.com/us/horoscopes/general/horoscope-general-weekly.aspx?sign=11", "https://horoscope.com/us/horoscopes/general/horoscope-general-monthly.aspx?sign=11", "https://horoscope.com/us/horoscopes/yearly/2020-horoscope-aquarius.aspx"],
+            "love" : ["https://horoscope.com/us/horoscopes/love/horoscope-general-daily-today.aspx?sign=11", "https://horoscope.com/us/horoscopes/love/horoscope-general-weekly.aspx?sign=11", "https://horoscope.com/us/horoscopes/love/horoscope-general-monthly.aspx?sign=11", "https://horoscope.com/us/horoscopes/love/2020-horoscope-aquarius.aspx"]
+        }
+    ]
+}
