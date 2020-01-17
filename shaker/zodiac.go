@@ -35,15 +35,37 @@ func GetZodiac(zodiac string, when string) int {
 	config := Configuration{}
 	myLink, err := os.Open(CONFIGFILE)
 	json.NewDecoder(myLink).Decode(&config)
-	//`fmt.Println("YUUUUUUh\n", config.Links[0].Readings[0].General[0])
+	fmt.Println("YUUUUUUh\n", config.Links[0].Readings[0].General[linkNum])
 
 	if err != nil {
 		log.Fatal(err)
 	}
 
-	fmt.Println(linkNum)
+	//fmt.Println(linkNum)
 
 	return 0
+}
+
+//GetGenre returns an integer referring to the genre of reading the user wants
+func GetGenre(genre string) int {
+	readingGenre := []string{"general", "love", "career", "money"}
+	const (
+		Daily = iota
+		Weekly
+		Monthly
+		Yearly
+	)
+	switch {
+	case readingLink[Daily] == when:
+		return Daily
+	case readingLink[Weekly] == when:
+		return Weekly
+	case readingLink[Monthly] == when:
+		return Monthly
+	case readingLink[Yearly] == when:
+		return Yearly
+	}
+	return -1
 }
 
 //GetType returns an integer referring to the type of reading the user wants
