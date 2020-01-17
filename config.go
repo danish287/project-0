@@ -2,11 +2,18 @@ package main
 
 import "flag"
 
-//Horoscope stores name of zodiac
-var Horoscope string
+//Zodiac stores name of zodiac
+var Zodiac string
+
+//ReadingType stores type of reading user is looking get
+var ReadingType string
+
+//ReadingFor specifies when the reader wants the reading
+var ReadingFor string
 
 func init() {
-	flag.StringVar(&Horoscope, "Horoscope", "EMPTY", "name of the zodiac sign")
+	flag.StringVar(&Zodiac, "Zodiac", "EMPTY", "name of the zodiac sign")
+	flag.StringVar(&ReadingFor, "ReadingFor", "daily", "time period of reading")
+	flag.StringVar(&ReadingType, "Type", "general", "type of reading")
 	flag.Parse()
-
 }
