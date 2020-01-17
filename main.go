@@ -11,11 +11,11 @@ func main() {
 		fmt.Println("\nPlease enter a zodiac sign using the flag Zodiac. \nExample: -Zodiac=Aquarius")
 	}
 
-	if ReadingType == "general" {
-		fmt.Println("general reading")
-	} else {
-		fmt.Println(ReadingType)
-	}
+	// if ReadingType == "general" {
+	// 	fmt.Println("general reading")
+	// } else {
+	// 	fmt.Println(ReadingType)
+	// }
 
 	if ReadingFor == "yearly" {
 		fmt.Println(shaker.GetZodiac(Zodiac, ReadingFor))

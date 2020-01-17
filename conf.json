@@ -1,20 +1,41 @@
-[
+{ "Links": [
     {
-    "Zodiac": "aquarius",
-    "Readings": [
-        { 
-            "General": ["https://horoscope.com/us/horoscopes/general/horoscope-general-daily-today.aspx?sign=11", "https://horoscope.com/us/horoscopes/general/horoscope-general-weekly.aspx?sign=11", "https://horoscope.com/us/horoscopes/general/horoscope-general-monthly.aspx?sign=11", "https://horoscope.com/us/horoscopes/yearly/2020-horoscope-aquarius.aspx"],
-            "Love" : ["https://horoscope.com/us/horoscopes/love/horoscope-general-daily-today.aspx?sign=11", "https://horoscope.com/us/horoscopes/love/horoscope-general-weekly.aspx?sign=11", "https://horoscope.com/us/horoscopes/love/horoscope-general-monthly.aspx?sign=11", "https://horoscope.com/us/horoscopes/love/2020-horoscope-aquarius.aspx"]    
-        }
+    "Zodiac":"aquarius",
+    "Readings":[
+    {
+    "General":[
+    "https://horoscope.com/us/horoscopes/general/horoscope-general-daily-today.aspx?sign=11",
+    "https://horoscope.com/us/horoscopes/general/horoscope-general-weekly.aspx?sign=11",
+    "https://horoscope.com/us/horoscopes/general/horoscope-general-monthly.aspx?sign=11",
+    "https://horoscope.com/us/horoscopes/yearly/2020-horoscope-aquarius.aspx"
+    ],
+    "Love":[
+    "https://horoscope.com/us/horoscopes/love/horoscope-general-daily-today.aspx?sign=11",
+    "https://horoscope.com/us/horoscopes/love/horoscope-general-weekly.aspx?sign=11",
+    "https://horoscope.com/us/horoscopes/love/horoscope-general-monthly.aspx?sign=11",
+    "https://horoscope.com/us/horoscopes/love/2020-horoscope-aquarius.aspx"
+    ]
+    }
     ]
     },
     {
-        "Zodiac": "pisces",
-        "Readings": [
-            { 
-                "General": ["https://horoscope.com/us/horoscopes/general/horoscope-general-daily-today.aspx?sign=11", "https://horoscope.com/us/horoscopes/general/horoscope-general-weekly.aspx?sign=11", "https://horoscope.com/us/horoscopes/general/horoscope-general-monthly.aspx?sign=11", "https://horoscope.com/us/horoscopes/yearly/2020-horoscope-aquarius.aspx"],
-                "Love" : ["https://horoscope.com/us/horoscopes/love/horoscope-general-daily-today.aspx?sign=11", "https://horoscope.com/us/horoscopes/love/horoscope-general-weekly.aspx?sign=11", "https://horoscope.com/us/horoscopes/love/horoscope-general-monthly.aspx?sign=11", "https://horoscope.com/us/horoscopes/love/2020-horoscope-aquarius.aspx"]    
-            }
-        ]
-        }
-]
+    "Zodiac":"pisces",
+    "Readings":[
+    {
+    "General":[
+    "https://horoscope.com/us/horoscopes/general/horoscope-general-daily-today.aspx?sign=11",
+    "https://horoscope.com/us/horoscopes/general/horoscope-general-weekly.aspx?sign=11",
+    "https://horoscope.com/us/horoscopes/general/horoscope-general-monthly.aspx?sign=11",
+    "https://horoscope.com/us/horoscopes/yearly/2020-horoscope-aquarius.aspx"
+    ],
+    "Love":[
+    "https://horoscope.com/us/horoscopes/love/horoscope-general-daily-today.aspx?sign=11",
+    "https://horoscope.com/us/horoscopes/love/horoscope-general-weekly.aspx?sign=11",
+    "https://horoscope.com/us/horoscopes/love/horoscope-general-monthly.aspx?sign=11",
+    "https://horoscope.com/us/horoscopes/love/2020-horoscope-aquarius.aspx"
+    ]
+    }
+    ]
+    }
+    ]
+}
