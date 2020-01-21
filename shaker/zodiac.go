@@ -1,14 +1,23 @@
 package shaker
 
 import (
+	"bufio"
 	"encoding/json"
 	"fmt"
 	"log"
+	"net/http"
 	"os"
+	"strings"
 )
 
 //CONFIGFILE stores the links where we get horoscopes
 const CONFIGFILE string = "conf.json"
+
+//MyHoroscope stores the response for the requested horoscope
+var MyHoroscope string
+
+//MyURL stores the URL we are trying to get
+var MyURL string
 
 //LinkCluster derives Links from json file
 type LinkCluster struct {
@@ -50,20 +59,20 @@ func GetZodiac(zodiac string, when string) int {
 func GetGenre(genre string) int {
 	readingGenre := []string{"general", "love", "career", "money"}
 	const (
-		Daily = iota
-		Weekly
-		Monthly
-		Yearly
+		Gen = iota
+		Luv
+		Car
+		Yr
 	)
 	switch {
-	case readingLink[Daily] == when:
-		return Daily
-	case readingLink[Weekly] == when:
-		return Weekly
-	case readingLink[Monthly] == when:
-		return Monthly
-	case readingLink[Yearly] == when:
-		return Yearly
+	case readingGenre[Gen] == genre:
+		return Gen
+	case readingGenre[Luv] == genre:
+		return Luv
+	case readingGenre[Car] == genre:
+		return Car
+	case readingGenre[Yr] == genre:
+		return Yr
 	}
 	return -1
 }
@@ -89,4 +98,38 @@ func GetType(when string) int {
 	}
 	return -1
 
+}
+
+//GetResponse gets requested horoscope
+func GetResponse(url string) {
+	resp, err := http.Get(url)
+	if err != nil {
+		panic(err)
+	}
+
+	defer resp.Body.Close()
+	scanner := bufio.NewScanner(resp.Body)
+
+	if resp.Status == "200 OK" {
+		for i := 0; scanner.Scan() && i < 268; i++ {
+			if i == 267 {
+				MyHoroscope = scanner.Text()
+				print("\n\n\n\nANSWER", MyHoroscope)
+			}
+		}
+	}
+
+	if err := scanner.Err(); err != nil {
+		panic(err)
+	}
+}
+
+//CleanResponse cleans response given by the HTTP request
+func CleanResponse(txt string) string {
+	txt = strings.ReplaceAll(txt, "strong", "")
+	txt = strings.ReplaceAll(txt, "<p>", "")
+	txt = strings.ReplaceAll(txt, "</p>", "")
+	txt = strings.ReplaceAll(txt, "<>", "")
+	txt = strings.ReplaceAll(txt, "</>", "")
+	return txt
 }
