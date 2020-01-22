@@ -43,20 +43,20 @@ type Configuration struct {
 var linkList []string
 var output string
 
-//GetZodiacURL is a function that takes a string of integers and returns the first thing in tthe listt
+//GetZodiacURL is a function that takes a string of integers and returns the first thing in the listt
 func GetZodiacURL(zodiac string, when string, myGenre string) string {
 	linkNum := GetType(when)
 	config := Configuration{}
 	myLink, err := os.Open(CONFIGFILE)
 	myZodiac = zodiac
 	mySign := GetZodiac(zodiac)
+	wantedGenre :=  GetGenre(myGenre)
 
-	//fmt.Println("LINKNUM", linkNum)
-	//fmt.Println("ZODIAC", mySign)
-	//fmt.Println("ZODIAC SIGN", config.Links[0].Zodiac)
-
+	if linkNum == -1 || mySign == -1 || wantedGenre == -1 {
+		return "Please try again using valid arguments."
+	}
+	
 	json.NewDecoder(myLink).Decode(&config)
-	//fmt.Println("CONFIG", config.Links[mySign].Readings[0].General[linkNum])
 
 	if err != nil {
 		log.Fatal(err)
@@ -77,11 +77,9 @@ func GetZodiacURL(zodiac string, when string, myGenre string) string {
 		output = config.Links[mySign].Readings[0].General[3]
 	}
 
-	//output := config.Links[0].Readings[0].General[0]
-	//fmt.Println("OUTTT", output)
 	output = strings.ReplaceAll(output, "https", "http")
 
-	return output //config.Links[mySign].Readings[0].General[linkNum]
+	return output /
 }
 
 //GetGenre returns an integer referring to the genre of reading the user wants
@@ -129,7 +127,7 @@ func GetType(when string) int {
 
 }
 
-//GetType returns an integer referring to the type of reading the user wants
+//GetZodiac returns an integer referencing the user's zodiac sign
 func GetZodiac(userInput string) int {
 	readingLink := []string{"aries", "taurus", "gemini", "cancer", "leo", "virgo", "libra", "scorpio", "sagittarius", "capricorn", "aquarius", "pisces"}
 	const (
