@@ -2,18 +2,14 @@ package shaker
 
 import (
 	"bufio"
-	"encoding/json"
-	"log"
 	"net/http"
-	"os"
 	"strings"
+
 	"github.com/danish287/project-0/config"
 )
 
-
 //MyHoroscope stores the response for the requested horoscope
 var MyHoroscope string
-
 
 //myZodiac stores the zodiac user input
 var myZodiac string
@@ -24,7 +20,7 @@ var output string
 //GetZodiacURL is a function that takes a string of integers and returns the first thing in the listt
 func GetZodiacURL(zodiac string, when string, myGenre string) string {
 	linkNum := GetType(when)
-	
+
 	myZodiac = zodiac
 	mySign := GetZodiac(zodiac)
 	wantedGenre := GetGenre(myGenre)
@@ -33,21 +29,19 @@ func GetZodiacURL(zodiac string, when string, myGenre string) string {
 		return "Please try again using valid arguments."
 	}
 
-	
-
 	if myGenre == "general" {
 
-		output = config.Links[mySign].Readings[0].General[linkNum]
+		output = config.ConfigMe.Links[mySign].Readings[0].General[linkNum]
 	} else if myGenre == "love" {
-		output = config.Links[mySign].Readings[0].Love[linkNum]
+		output = config.ConfigMe.Links[mySign].Readings[0].Love[linkNum]
 	} else if myGenre == "career" {
-		output = config.Links[mySign].Readings[0].Career[linkNum]
+		output = config.ConfigMe.Links[mySign].Readings[0].Career[linkNum]
 	} else {
-		output = config.Links[mySign].Readings[0].Money[0]
+		output = config.ConfigMe.Links[mySign].Readings[0].Money[0]
 	}
 
 	if when == "yearly" {
-		output = config.Links[mySign].Readings[0].General[3]
+		output = config.ConfigMe.Links[mySign].Readings[0].General[3]
 	}
 
 	output = strings.ReplaceAll(output, "https", "http")
@@ -149,7 +143,9 @@ func GetZodiac(userInput string) int {
 
 //GetMyResponse gets requested horoscope
 func GetMyResponse(url string, ReadingFor string) string {
+
 	resp, err := http.Get(url)
+
 	if err != nil {
 		panic(err)
 	}
@@ -158,8 +154,7 @@ func GetMyResponse(url string, ReadingFor string) string {
 	scanner := bufio.NewScanner(resp.Body)
 
 	if resp.Status == "200 OK" {
-
-		if ReadingFor == "yearly" {
+		if config.ReadingFor == "yearly" {
 			heading := "<h2>" + strings.Title(myZodiac) + " Horoscope</h2>"
 			count := 300
 			for i := 0; scanner.Scan() && i < count; i++ {
@@ -171,6 +166,7 @@ func GetMyResponse(url string, ReadingFor string) string {
 			}
 
 		} else {
+
 			for scanner.Scan() {
 				myLine := scanner.Text()
 				if strings.Contains(myLine, "<p><strong") {
@@ -186,8 +182,9 @@ func GetMyResponse(url string, ReadingFor string) string {
 	if err := scanner.Err(); err != nil {
 		panic(err)
 	}
+	MyHoroscope = CleanResponse(MyHoroscope)
 
-	return CleanResponse(MyHoroscope)
+	return MyHoroscope
 }
 
 //CleanResponse cleans response given by the HTTP request

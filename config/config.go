@@ -1,17 +1,14 @@
 package config
 
 import (
-	"bufio"
 	"encoding/json"
-	"log"
-	"net/http"
-	"os"
-	"strings"
 	"flag"
+	"log"
+	"os"
 )
 
-//Zodiac stores name of zodiac
-var Zodiac string
+//ZodiacSign stores name of zodiac
+var ZodiacSign string
 
 //ReadingType stores type of reading user is looking get
 var ReadingType string
@@ -44,22 +41,19 @@ type Configuration struct {
 	Links []ZodiacCluster
 }
 
+var ConfigMe Configuration
 
 func init() {
 
-	config := Configuration{}
 	myLink, err := os.Open(CONFIGFILE)
-	json.NewDecoder(myLink).Decode(&config)
+	json.NewDecoder(myLink).Decode(&ConfigMe)
 
 	if err != nil {
 		log.Fatal(err)
 	}
-	
-	flag.StringVar(&Zodiac, "Zodiac", "EMPTY", "name of the zodiac sign")
-	flag.StringVar(&ReadingFor, "ReadingFor", "daily", "time period of reading")
-	flag.StringVar(&ReadingType, "Type", "general", "type of reading")
+	flag.StringVar(&ZodiacSign, "ZodiacSign", "EMPTY", "name of the zodiac sign")
+	flag.StringVar(&ReadingFor, "ChooseReading", "daily", "time period of reading")
+	flag.StringVar(&ReadingType, "ChooseType", "general", "type of reading")
 	flag.Parse()
 
-
-	
 }
