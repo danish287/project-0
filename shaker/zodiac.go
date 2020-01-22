@@ -3,6 +3,7 @@ package shaker
 import (
 	"bufio"
 	"encoding/json"
+	"fmt"
 	"log"
 	"net/http"
 	"os"
@@ -25,8 +26,8 @@ var myZodiac string
 type LinkCluster struct {
 	General []string
 	Love    []string
-	Career []string
-	Money []string
+	Career  []string
+	Money   []string
 }
 
 //ZodiacCluster derives links from json file
@@ -50,29 +51,31 @@ func GetZodiacURL(zodiac string, when string, myGenre string) string {
 	myLink, err := os.Open(CONFIGFILE)
 	myZodiac = zodiac
 	mySign := GetZodiac(zodiac)
+
+	fmt.Println("LINKNUM", linkNum)
+	fmt.Println("ZODIAC", mySign)
+
 	json.NewDecoder(myLink).Decode(&config)
 
 	if err != nil {
 		log.Fatal(err)
 	}
 
-	if myGenre == "general"{
-		output = config.Links[GetZodiac].Readings[0].General[linkNum]
+	if myGenre == "general" {
+		mySign := GetZodiac(zodiac)
+		output = config.Links[mySign].Readings[0].General[linkNum]
 	} else if myGenre == "love" {
-		output = config.Links[GetZodiac].Readings[0].Love[linkNum]
+		output = config.Links[mySign].Readings[0].Love[linkNum]
 	} else if myGenre == "career" {
-		output = config.Links[GetZodiac].Readings[0].General[linkNum]
-	}
-	else{
-		output = config.Links[GetZodiac].Readings[0].Money[0]
+		output = config.Links[mySign].Readings[0].Career[linkNum]
+	} else {
+		output = config.Links[mySign].Readings[0].Money[0]
 	}
 
-	
-	output = strings.ReplaceAll(link2, "https", "http")
+	output = strings.ReplaceAll(output, "https", "http")
 
 	return output
 }
-
 
 //GetGenre returns an integer referring to the genre of reading the user wants
 func GetGenre(genre string) int {
