@@ -3,7 +3,6 @@ package shaker
 import (
 	"bufio"
 	"encoding/json"
-	"fmt"
 	"log"
 	"net/http"
 	"os"
@@ -52,17 +51,19 @@ func GetZodiacURL(zodiac string, when string, myGenre string) string {
 	myZodiac = zodiac
 	mySign := GetZodiac(zodiac)
 
-	fmt.Println("LINKNUM", linkNum)
-	fmt.Println("ZODIAC", mySign)
+	//fmt.Println("LINKNUM", linkNum)
+	//fmt.Println("ZODIAC", mySign)
+	//fmt.Println("ZODIAC SIGN", config.Links[0].Zodiac)
 
 	json.NewDecoder(myLink).Decode(&config)
+	//fmt.Println("CONFIG", config.Links[mySign].Readings[0].General[linkNum])
 
 	if err != nil {
 		log.Fatal(err)
 	}
 
 	if myGenre == "general" {
-		mySign := GetZodiac(zodiac)
+
 		output = config.Links[mySign].Readings[0].General[linkNum]
 	} else if myGenre == "love" {
 		output = config.Links[mySign].Readings[0].Love[linkNum]
@@ -72,9 +73,15 @@ func GetZodiacURL(zodiac string, when string, myGenre string) string {
 		output = config.Links[mySign].Readings[0].Money[0]
 	}
 
+	if when == "yearly" {
+		output = config.Links[mySign].Readings[0].General[3]
+	}
+
+	//output := config.Links[0].Readings[0].General[0]
+	//fmt.Println("OUTTT", output)
 	output = strings.ReplaceAll(output, "https", "http")
 
-	return output
+	return output //config.Links[mySign].Readings[0].General[linkNum]
 }
 
 //GetGenre returns an integer referring to the genre of reading the user wants
