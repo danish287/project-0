@@ -9,7 +9,7 @@ func main() {
 	if Zodiac == "EMPTY" {
 		fmt.Println("\nPlease enter a zodiac sign using the flag Zodiac. \nExample: -Zodiac=Aquarius")
 	}
-	zodiacURL := shaker.GetZodiacURL(Zodiac, ReadingFor)
+	zodiacURL := shaker.GetZodiacURL(Zodiac, ReadingFor, ReadingType)
 	answer := shaker.GetMyResponse(zodiacURL, ReadingFor)
 
 	fmt.Println("\n\n ", answer)

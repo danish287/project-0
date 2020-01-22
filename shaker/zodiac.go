@@ -25,6 +25,8 @@ var myZodiac string
 type LinkCluster struct {
 	General []string
 	Love    []string
+	Career []string
+	Money []string
 }
 
 //ZodiacCluster derives links from json file
@@ -39,24 +41,38 @@ type Configuration struct {
 }
 
 var linkList []string
+var output string
 
 //GetZodiacURL is a function that takes a string of integers and returns the first thing in tthe listt
-func GetZodiacURL(zodiac string, when string) string {
+func GetZodiacURL(zodiac string, when string, myGenre string) string {
 	linkNum := GetType(when)
 	config := Configuration{}
 	myLink, err := os.Open(CONFIGFILE)
 	myZodiac = zodiac
+	mySign := GetZodiac(zodiac)
 	json.NewDecoder(myLink).Decode(&config)
 
 	if err != nil {
 		log.Fatal(err)
 	}
 
-	link2 := config.Links[1].Readings[0].General[linkNum]
-	link2 = strings.ReplaceAll(link2, "https", "http")
+	if myGenre == "general"{
+		output = config.Links[GetZodiac].Readings[0].General[linkNum]
+	} else if myGenre == "love" {
+		output = config.Links[GetZodiac].Readings[0].Love[linkNum]
+	} else if myGenre == "career" {
+		output = config.Links[GetZodiac].Readings[0].General[linkNum]
+	}
+	else{
+		output = config.Links[GetZodiac].Readings[0].Money[0]
+	}
 
-	return link2
+	
+	output = strings.ReplaceAll(link2, "https", "http")
+
+	return output
 }
+
 
 //GetGenre returns an integer referring to the genre of reading the user wants
 func GetGenre(genre string) int {
