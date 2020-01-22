@@ -3,20 +3,23 @@ package main
 import (
 	"fmt"
 
+	"github.com/danish287/project-0/config"
 	"github.com/danish287/project-0/shaker"
 )
 
 func main() {
-	if Zodiac == "EMPTY" {
+	userIn := config.ZodiacSign
+
+	if userIn == "EMPTY" {
 		fmt.Println("\nPlease enter a zodiac sign using the flag Zodiac. \nExample: -Zodiac=Aquarius")
 	}
-	zodiacURL := shaker.GetZodiacURL(Zodiac, ReadingFor, ReadingType)
-	if zodiacURL == "Please try again using valid arguments." {
-		fmt.Println("\nPlease try again using valid arguments.\n")
-	} else {
-		answer := shaker.GetMyResponse(zodiacURL, ReadingFor)
 
-		fmt.Println("\n\n ", answer)
+	zodiacURL := shaker.GetZodiacURL(userIn, config.ReadingFor, config.ReadingType)
+
+	if zodiacURL == "Please try again using valid arguments." {
+		fmt.Println("Please try again using valid arguments.")
+	} else {
+		fmt.Println("\n\n ", shaker.GetMyResponse(zodiacURL, config.ReadingFor))
 	}
 
 }
