@@ -1,4 +1,4 @@
-[
+{ "Links": [
     {
     "zodiac": "aries",
     "readings": [
@@ -153,5 +153,6 @@
                 "money" : ["https://www.horoscope.com/us/horoscopes/money/horoscope-money-weekly.aspx?sign=11"]       
             }
         ]
-    },
+    }
 ]
+}

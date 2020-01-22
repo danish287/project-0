@@ -17,7 +17,7 @@ var ReadingType string
 var ReadingFor string
 
 //CONFIGFILE stores the links where we get horoscopes
-const CONFIGFILE string = "conf.json"
+const CONFIGFILE string = "../../conf.json"
 
 //MyURL stores the URL we are trying to get
 var MyURL string
@@ -49,6 +49,7 @@ func init() {
 	json.NewDecoder(myLink).Decode(&ConfigMe)
 
 	if err != nil {
+
 		log.Fatal(err)
 	}
 	flag.StringVar(&ZodiacSign, "ZodiacSign", "EMPTY", "name of the zodiac sign")
