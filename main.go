@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+
 	"github.com/danish287/project-0/shaker"
 )
 
@@ -10,8 +11,12 @@ func main() {
 		fmt.Println("\nPlease enter a zodiac sign using the flag Zodiac. \nExample: -Zodiac=Aquarius")
 	}
 	zodiacURL := shaker.GetZodiacURL(Zodiac, ReadingFor, ReadingType)
-	answer := shaker.GetMyResponse(zodiacURL, ReadingFor)
+	if zodiacURL == "Please try again using valid arguments." {
+		fmt.Println("\nPlease try again using valid arguments.\n")
+	} else {
+		answer := shaker.GetMyResponse(zodiacURL, ReadingFor)
 
-	fmt.Println("\n\n ", answer)
+		fmt.Println("\n\n ", answer)
+	}
 
 }

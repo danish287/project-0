@@ -50,12 +50,12 @@ func GetZodiacURL(zodiac string, when string, myGenre string) string {
 	myLink, err := os.Open(CONFIGFILE)
 	myZodiac = zodiac
 	mySign := GetZodiac(zodiac)
-	wantedGenre :=  GetGenre(myGenre)
+	wantedGenre := GetGenre(myGenre)
 
 	if linkNum == -1 || mySign == -1 || wantedGenre == -1 {
 		return "Please try again using valid arguments."
 	}
-	
+
 	json.NewDecoder(myLink).Decode(&config)
 
 	if err != nil {
@@ -79,7 +79,7 @@ func GetZodiacURL(zodiac string, when string, myGenre string) string {
 
 	output = strings.ReplaceAll(output, "https", "http")
 
-	return output /
+	return output
 }
 
 //GetGenre returns an integer referring to the genre of reading the user wants
