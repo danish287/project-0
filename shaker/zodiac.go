@@ -52,7 +52,6 @@ func GetZodiacURL(zodiac string, when string) string {
 		log.Fatal(err)
 	}
 
-	//fmt.Println(linkNum)
 	link2 := config.Links[1].Readings[0].General[linkNum]
 	link2 = strings.ReplaceAll(link2, "https", "http")
 
@@ -104,13 +103,57 @@ func GetType(when string) int {
 
 }
 
+//GetType returns an integer referring to the type of reading the user wants
+func GetZodiac(userInput string) int {
+	readingLink := []string{"aries", "taurus", "gemini", "cancer", "leo", "virgo", "libra", "scorpio", "sagittarius", "capricorn", "aquarius", "pisces"}
+	const (
+		Aries = iota
+		Taurus
+		Gemini
+		Cancer
+		Leo
+		Virgo
+		Libra
+		Scorpio
+		Sagittarius
+		Capricorn
+		Aquarius
+		Pisces
+	)
+	switch {
+	case readingLink[Aries] == userInput:
+		return Aries
+	case readingLink[Taurus] == userInput:
+		return Taurus
+	case readingLink[Gemini] == userInput:
+		return Gemini
+	case readingLink[Cancer] == userInput:
+		return Cancer
+	case readingLink[Leo] == userInput:
+		return Leo
+	case readingLink[Virgo] == userInput:
+		return Virgo
+	case readingLink[Libra] == userInput:
+		return Libra
+	case readingLink[Scorpio] == userInput:
+		return Scorpio
+	case readingLink[Sagittarius] == userInput:
+		return Sagittarius
+	case readingLink[Capricorn] == userInput:
+		return Capricorn
+	case readingLink[Aquarius] == userInput:
+		return Aquarius
+	case readingLink[Pisces] == userInput:
+		return Pisces
+	}
+	return -1
+
+}
+
 //GetMyResponse gets requested horoscope
 func GetMyResponse(url string, ReadingFor string) string {
-	//println("\nMY RUSL \n", url)
 	resp, err := http.Get(url)
 	if err != nil {
-		//fmt.Println("ERROR IS HERE")
-		//fmt.Println("NOT NIL")
 		panic(err)
 	}
 
@@ -120,17 +163,12 @@ func GetMyResponse(url string, ReadingFor string) string {
 	if resp.Status == "200 OK" {
 
 		if ReadingFor == "yearly" {
-			//<h2>Aquarius Horoscope</h2>
 			heading := "<h2>" + strings.Title(myZodiac) + " Horoscope</h2>"
-			//fmt.Println(heading)
 			count := 300
 			for i := 0; scanner.Scan() && i < count; i++ {
 				myLine := scanner.Text()
-				//fmt.Println(myLine)
 				if strings.Contains(myLine, heading) {
-					//MyHoroscope = myLine
 					count = i + 2
-
 				}
 				MyHoroscope = scanner.Text()
 			}
@@ -138,7 +176,6 @@ func GetMyResponse(url string, ReadingFor string) string {
 		} else {
 			for scanner.Scan() {
 				myLine := scanner.Text()
-				//fmt.Println(myLine)
 				if strings.Contains(myLine, "<p><strong") {
 					MyHoroscope = myLine
 					break
@@ -166,8 +203,6 @@ func CleanResponse(txt string) string {
 	txt = strings.ReplaceAll(txt, "%!(EXTRA string=", "")
 	txt = strings.ReplaceAll(txt, ")", "")
 	txt = strings.ReplaceAll(txt, "&nbsp;", "")
-
 	txt = strings.ReplaceAll(txt, "<br>", " ")
-	//txt = strings.ReplaceAll(txt, "&nbsp;-&nbsp;", "")
 	return txt
 }
