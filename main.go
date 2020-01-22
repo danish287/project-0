@@ -17,10 +17,19 @@ func main() {
 	// 	fmt.Println(ReadingType)
 	// }
 
-	if ReadingFor == "yearly" {
-		fmt.Println(shaker.GetZodiac(Zodiac, ReadingFor))
+	if ReadingFor == "daily" {
+		var temp string = shaker.GetZodiacURL(Zodiac, ReadingFor)
+		answer := shaker.GetMyResponse(temp)
+
+		//fmt.Printf("THISSS %T\n", temp)
+		fmt.Println("MY ANSWER \n\n ", answer)
 	} else {
-		fmt.Println(ReadingFor)
+		// var temp string = shaker.GetZodiacURL(Zodiac, "weekly")
+		// answer := shaker.GetMyResponse(temp)
+
+		// fmt.Printf("THISSS %T\n", temp)
+		// fmt.Printf("SECOND ", answer)
+		fmt.Println("YIKES")
 	}
 
 }

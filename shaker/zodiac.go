@@ -3,7 +3,6 @@ package shaker
 import (
 	"bufio"
 	"encoding/json"
-	"fmt"
 	"log"
 	"net/http"
 	"os"
@@ -38,21 +37,22 @@ type Configuration struct {
 
 var linkList []string
 
-//GetZodiac is a function that takes a string of integers and returns the first thing in tthe listt
-func GetZodiac(zodiac string, when string) int {
+//GetZodiacURL is a function that takes a string of integers and returns the first thing in tthe listt
+func GetZodiacURL(zodiac string, when string) string {
 	linkNum := GetType(when)
 	config := Configuration{}
 	myLink, err := os.Open(CONFIGFILE)
 	json.NewDecoder(myLink).Decode(&config)
-	fmt.Println("YUUUUUUh\n", config.Links[0].Readings[0].General[linkNum])
 
 	if err != nil {
 		log.Fatal(err)
 	}
 
 	//fmt.Println(linkNum)
+	link2 := config.Links[0].Readings[0].General[linkNum]
+	link2 = strings.ReplaceAll(link2, "https", "http")
 
-	return 0
+	return link2
 }
 
 //GetGenre returns an integer referring to the genre of reading the user wants
@@ -100,10 +100,13 @@ func GetType(when string) int {
 
 }
 
-//GetResponse gets requested horoscope
-func GetResponse(url string) {
+//GetMyResponse gets requested horoscope
+func GetMyResponse(url string) string {
+	//println("\nMY RUSL \n", url)
 	resp, err := http.Get(url)
 	if err != nil {
+		//fmt.Println("ERROR IS HERE")
+		//fmt.Println("NOT NIL")
 		panic(err)
 	}
 
@@ -112,9 +115,11 @@ func GetResponse(url string) {
 
 	if resp.Status == "200 OK" {
 		for i := 0; scanner.Scan() && i < 268; i++ {
+			//print("\n\nANSWER\n\n", MyHoroscope)
 			if i == 267 {
 				MyHoroscope = scanner.Text()
-				print("\n\n\n\nANSWER", MyHoroscope)
+				break
+
 			}
 		}
 	}
@@ -122,6 +127,8 @@ func GetResponse(url string) {
 	if err := scanner.Err(); err != nil {
 		panic(err)
 	}
+
+	return CleanResponse(MyHoroscope)
 }
 
 //CleanResponse cleans response given by the HTTP request
@@ -131,5 +138,7 @@ func CleanResponse(txt string) string {
 	txt = strings.ReplaceAll(txt, "</p>", "")
 	txt = strings.ReplaceAll(txt, "<>", "")
 	txt = strings.ReplaceAll(txt, "</>", "")
+	txt = strings.ReplaceAll(txt, "%!(EXTRA string=", "")
+	txt = strings.ReplaceAll(txt, ")", "")
 	return txt
 }
