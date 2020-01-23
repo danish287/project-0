@@ -63,10 +63,10 @@
         "zodiac": "virgo",
         "readings": [
             { 
-                "general": ["http://horoscope.com/us/horoscopes/general/horoscope-general-daily-today.aspx?sign=11", "http://horoscope.com/us/horoscopes/general/horoscope-general-weekly.aspx?sign=11", "http://horoscope.com/us/horoscopes/general/horoscope-general-monthly.aspx?sign=11", "http://horoscope.com/us/horoscopes/yearly/2020-horoscope-aquarius.aspx"],
-                "love" : ["https://www.horoscope.com/us/horoscopes/love/horoscope-love-daily-today.aspx?sign=11", "https://www.horoscope.com/us/horoscopes/love/horoscope-love-weekly-single.aspx?sign=11", "http://horoscope.com/us/horoscopes/love/horoscope-general-monthly.aspx?sign=11", "http://horoscope.com/us/horoscopes/yearly/2020-horoscope-aquarius.aspx"],
-                "career": ["https://www.horoscope.com/us/horoscopes/career/horoscope-career-daily-today.aspx?sign=11", "https://www.horoscope.com/us/horoscopes/career/horoscope-career-weekly.aspx?sign=11", "https://www.horoscope.com/us/horoscopes/career/horoscope-career-monthly.aspx?sign=11", "http://horoscope.com/us/horoscopes/yearly/2020-horoscope-aquarius.aspx"],
-                "money" : ["https://www.horoscope.com/us/horoscopes/money/horoscope-money-weekly.aspx?sign=11"]       
+                "general": ["http://horoscope.com/us/horoscopes/general/horoscope-general-daily-today.aspx?sign=6", "http://horoscope.com/us/horoscopes/general/horoscope-general-weekly.aspx?sign=6", "http://horoscope.com/us/horoscopes/general/horoscope-general-monthly.aspx?sign=6", "http://horoscope.com/us/horoscopes/yearly/2020-horoscope-virgo.aspx"],
+                "love" : ["https://www.horoscope.com/us/horoscopes/love/horoscope-love-daily-today.aspx?sign=6", "https://www.horoscope.com/us/horoscopes/love/horoscope-love-weekly-single.aspx?sign=6", "http://horoscope.com/us/horoscopes/love/horoscope-general-monthly.aspx?sign=6", "http://horoscope.com/us/horoscopes/yearly/2020-horoscope-virgo.aspx"],
+                "career": ["https://www.horoscope.com/us/horoscopes/career/horoscope-career-daily-today.aspx?sign=6", "https://www.horoscope.com/us/horoscopes/career/horoscope-career-weekly.aspx?sign=6", "https://www.horoscope.com/us/horoscopes/career/horoscope-career-monthly.aspx?sign=6", "http://horoscope.com/us/horoscopes/yearly/2020-horoscope-virgo.aspx"],
+                "money" : ["https://www.horoscope.com/us/horoscopes/money/horoscope-money-weekly.aspx?sign=6"]       
             }
         ]
     },
@@ -75,10 +75,10 @@
         "zodiac": "libra",
         "readings": [
             { 
-                "general": ["http://horoscope.com/us/horoscopes/general/horoscope-general-daily-today.aspx?sign=11", "http://horoscope.com/us/horoscopes/general/horoscope-general-weekly.aspx?sign=11", "http://horoscope.com/us/horoscopes/general/horoscope-general-monthly.aspx?sign=11", "http://horoscope.com/us/horoscopes/yearly/2020-horoscope-aquarius.aspx"],
-                "love" : ["https://www.horoscope.com/us/horoscopes/love/horoscope-love-daily-today.aspx?sign=11", "https://www.horoscope.com/us/horoscopes/love/horoscope-love-weekly-single.aspx?sign=11", "http://horoscope.com/us/horoscopes/love/horoscope-general-monthly.aspx?sign=11", "http://horoscope.com/us/horoscopes/yearly/2020-horoscope-aquarius.aspx"],
-                "career": ["https://www.horoscope.com/us/horoscopes/career/horoscope-career-daily-today.aspx?sign=11", "https://www.horoscope.com/us/horoscopes/career/horoscope-career-weekly.aspx?sign=11", "https://www.horoscope.com/us/horoscopes/career/horoscope-career-monthly.aspx?sign=11", "http://horoscope.com/us/horoscopes/yearly/2020-horoscope-aquarius.aspx"],
-                "money" : ["https://www.horoscope.com/us/horoscopes/money/horoscope-money-weekly.aspx?sign=11"]       
+                "general": ["http://horoscope.com/us/horoscopes/general/horoscope-general-daily-today.aspx?sign=7", "http://horoscope.com/us/horoscopes/general/horoscope-general-weekly.aspx?sign=7", "http://horoscope.com/us/horoscopes/general/horoscope-general-monthly.aspx?sign=7", "http://horoscope.com/us/horoscopes/yearly/2020-horoscope-libra.aspx"],
+                "love" : ["https://www.horoscope.com/us/horoscopes/love/horoscope-love-daily-today.aspx?sign=7", "https://www.horoscope.com/us/horoscopes/love/horoscope-love-weekly-single.aspx?sign=7", "http://horoscope.com/us/horoscopes/love/horoscope-general-monthly.aspx?sign=7", "http://horoscope.com/us/horoscopes/yearly/2020-horoscope-libra.aspx"],
+                "career": ["https://www.horoscope.com/us/horoscopes/career/horoscope-career-daily-today.aspx?sign=7", "https://www.horoscope.com/us/horoscopes/career/horoscope-career-weekly.aspx?sign=7", "https://www.horoscope.com/us/horoscopes/career/horoscope-career-monthly.aspx?sign=7", "http://horoscope.com/us/horoscopes/yearly/2020-horoscope-libra.aspx"],
+                "money" : ["https://www.horoscope.com/us/horoscopes/money/horoscope-money-weekly.aspx?sign=7"]       
             }
         ]
     },
@@ -87,22 +87,10 @@
         "zodiac": "scorpio",
         "readings": [
             { 
-                "general": ["http://horoscope.com/us/horoscopes/general/horoscope-general-daily-today.aspx?sign=11", "http://horoscope.com/us/horoscopes/general/horoscope-general-weekly.aspx?sign=11", "http://horoscope.com/us/horoscopes/general/horoscope-general-monthly.aspx?sign=11", "http://horoscope.com/us/horoscopes/yearly/2020-horoscope-aquarius.aspx"],
-                "love" : ["https://www.horoscope.com/us/horoscopes/love/horoscope-love-daily-today.aspx?sign=11", "https://www.horoscope.com/us/horoscopes/love/horoscope-love-weekly-single.aspx?sign=11", "http://horoscope.com/us/horoscopes/love/horoscope-general-monthly.aspx?sign=11", "http://horoscope.com/us/horoscopes/yearly/2020-horoscope-aquarius.aspx"],
-                "career": ["https://www.horoscope.com/us/horoscopes/career/horoscope-career-daily-today.aspx?sign=11", "https://www.horoscope.com/us/horoscopes/career/horoscope-career-weekly.aspx?sign=11", "https://www.horoscope.com/us/horoscopes/career/horoscope-career-monthly.aspx?sign=11", "http://horoscope.com/us/horoscopes/yearly/2020-horoscope-aquarius.aspx"],
-                "money" : ["https://www.horoscope.com/us/horoscopes/money/horoscope-money-weekly.aspx?sign=11"]       
-            }
-        ]
-    },
-
-    {
-        "zodiac": "aquarius",
-        "readings": [
-            { 
-                "general": ["http://horoscope.com/us/horoscopes/general/horoscope-general-daily-today.aspx?sign=11", "http://horoscope.com/us/horoscopes/general/horoscope-general-weekly.aspx?sign=11", "http://horoscope.com/us/horoscopes/general/horoscope-general-monthly.aspx?sign=11", "http://horoscope.com/us/horoscopes/yearly/2020-horoscope-aquarius.aspx"],
-                "love" : ["https://www.horoscope.com/us/horoscopes/love/horoscope-love-daily-today.aspx?sign=11", "https://www.horoscope.com/us/horoscopes/love/horoscope-love-weekly-single.aspx?sign=11", "http://horoscope.com/us/horoscopes/love/horoscope-general-monthly.aspx?sign=11", "http://horoscope.com/us/horoscopes/yearly/2020-horoscope-aquarius.aspx"],
-                "career": ["https://www.horoscope.com/us/horoscopes/career/horoscope-career-daily-today.aspx?sign=11", "https://www.horoscope.com/us/horoscopes/career/horoscope-career-weekly.aspx?sign=11", "https://www.horoscope.com/us/horoscopes/career/horoscope-career-monthly.aspx?sign=11", "http://horoscope.com/us/horoscopes/yearly/2020-horoscope-aquarius.aspx"],
-                "money" : ["https://www.horoscope.com/us/horoscopes/money/horoscope-money-weekly.aspx?sign=11"]       
+                "general": ["http://horoscope.com/us/horoscopes/general/horoscope-general-daily-today.aspx?sign=8", "http://horoscope.com/us/horoscopes/general/horoscope-general-weekly.aspx?sign=8", "http://horoscope.com/us/horoscopes/general/horoscope-general-monthly.aspx?sign=8", "http://horoscope.com/us/horoscopes/yearly/2020-horoscope-scorpio.aspx"],
+                "love" : ["https://www.horoscope.com/us/horoscopes/love/horoscope-love-daily-today.aspx?sign=8", "https://www.horoscope.com/us/horoscopes/love/horoscope-love-weekly-single.aspx?sign=8", "http://horoscope.com/us/horoscopes/love/horoscope-general-monthly.aspx?sign=8", "http://horoscope.com/us/horoscopes/yearly/2020-horoscope-scorpio.aspx"],
+                "career": ["https://www.horoscope.com/us/horoscopes/career/horoscope-career-daily-today.aspx?sign=8", "https://www.horoscope.com/us/horoscopes/career/horoscope-career-weekly.aspx?sign=8", "https://www.horoscope.com/us/horoscopes/career/horoscope-career-monthly.aspx?sign=8", "http://horoscope.com/us/horoscopes/yearly/2020-horoscope-scorpio.aspx"],
+                "money" : ["https://www.horoscope.com/us/horoscopes/money/horoscope-money-weekly.aspx?sign=8"]       
             }
         ]
     },
@@ -111,10 +99,10 @@
         "zodiac": "sagittarius",
         "readings": [
             { 
-                "general": ["http://horoscope.com/us/horoscopes/general/horoscope-general-daily-today.aspx?sign=11", "http://horoscope.com/us/horoscopes/general/horoscope-general-weekly.aspx?sign=11", "http://horoscope.com/us/horoscopes/general/horoscope-general-monthly.aspx?sign=11", "http://horoscope.com/us/horoscopes/yearly/2020-horoscope-aquarius.aspx"],
-                "love" : ["https://www.horoscope.com/us/horoscopes/love/horoscope-love-daily-today.aspx?sign=11", "https://www.horoscope.com/us/horoscopes/love/horoscope-love-weekly-single.aspx?sign=11", "http://horoscope.com/us/horoscopes/love/horoscope-general-monthly.aspx?sign=11", "http://horoscope.com/us/horoscopes/yearly/2020-horoscope-aquarius.aspx"],
-                "career": ["https://www.horoscope.com/us/horoscopes/career/horoscope-career-daily-today.aspx?sign=11", "https://www.horoscope.com/us/horoscopes/career/horoscope-career-weekly.aspx?sign=11", "https://www.horoscope.com/us/horoscopes/career/horoscope-career-monthly.aspx?sign=11", "http://horoscope.com/us/horoscopes/yearly/2020-horoscope-aquarius.aspx"],
-                "money" : ["https://www.horoscope.com/us/horoscopes/money/horoscope-money-weekly.aspx?sign=11"]       
+                "general": ["http://horoscope.com/us/horoscopes/general/horoscope-general-daily-today.aspx?sign=9", "http://horoscope.com/us/horoscopes/general/horoscope-general-weekly.aspx?sign=9", "http://horoscope.com/us/horoscopes/general/horoscope-general-monthly.aspx?sign=9", "http://horoscope.com/us/horoscopes/yearly/2020-horoscope-sagittarius.aspx"],
+                "love" : ["https://www.horoscope.com/us/horoscopes/love/horoscope-love-daily-today.aspx?sign=9", "https://www.horoscope.com/us/horoscopes/love/horoscope-love-weekly-single.aspx?sign=9", "http://horoscope.com/us/horoscopes/love/horoscope-general-monthly.aspx?sign=9", "http://horoscope.com/us/horoscopes/yearly/2020-horoscope-sagittarius.aspx"],
+                "career": ["https://www.horoscope.com/us/horoscopes/career/horoscope-career-daily-today.aspx?sign=9", "https://www.horoscope.com/us/horoscopes/career/horoscope-career-weekly.aspx?sign=9", "https://www.horoscope.com/us/horoscopes/career/horoscope-career-monthly.aspx?sign=9", "http://horoscope.com/us/horoscopes/yearly/2020-horoscope-sagittarius.aspx"],
+                "money" : ["https://www.horoscope.com/us/horoscopes/money/horoscope-money-weekly.aspx?sign=9"]       
             }
         ]
     },
@@ -123,10 +111,10 @@
         "zodiac": "capricorn",
         "readings": [
             { 
-                "general": ["http://horoscope.com/us/horoscopes/general/horoscope-general-daily-today.aspx?sign=11", "http://horoscope.com/us/horoscopes/general/horoscope-general-weekly.aspx?sign=11", "http://horoscope.com/us/horoscopes/general/horoscope-general-monthly.aspx?sign=11", "http://horoscope.com/us/horoscopes/yearly/2020-horoscope-aquarius.aspx"],
-                "love" : ["https://www.horoscope.com/us/horoscopes/love/horoscope-love-daily-today.aspx?sign=11", "https://www.horoscope.com/us/horoscopes/love/horoscope-love-weekly-single.aspx?sign=11", "http://horoscope.com/us/horoscopes/love/horoscope-general-monthly.aspx?sign=11", "http://horoscope.com/us/horoscopes/yearly/2020-horoscope-aquarius.aspx"],
-                "career": ["https://www.horoscope.com/us/horoscopes/career/horoscope-career-daily-today.aspx?sign=11", "https://www.horoscope.com/us/horoscopes/career/horoscope-career-weekly.aspx?sign=11", "https://www.horoscope.com/us/horoscopes/career/horoscope-career-monthly.aspx?sign=11", "http://horoscope.com/us/horoscopes/yearly/2020-horoscope-aquarius.aspx"],
-                "money" : ["https://www.horoscope.com/us/horoscopes/money/horoscope-money-weekly.aspx?sign=11"]       
+                "general": ["http://horoscope.com/us/horoscopes/general/horoscope-general-daily-today.aspx?sign=10", "http://horoscope.com/us/horoscopes/general/horoscope-general-weekly.aspx?sign=10", "http://horoscope.com/us/horoscopes/general/horoscope-general-monthly.aspx?sign=10", "http://horoscope.com/us/horoscopes/yearly/2020-horoscope-capricorn.aspx"],
+                "love" : ["https://www.horoscope.com/us/horoscopes/love/horoscope-love-daily-today.aspx?sign=10", "https://www.horoscope.com/us/horoscopes/love/horoscope-love-weekly-single.aspx?sign=10", "http://horoscope.com/us/horoscopes/love/horoscope-general-monthly.aspx?sign=10", "http://horoscope.com/us/horoscopes/yearly/2020-horoscope-capricorn.aspx"],
+                "career": ["https://www.horoscope.com/us/horoscopes/career/horoscope-career-daily-today.aspx?sign=10", "https://www.horoscope.com/us/horoscopes/career/horoscope-career-weekly.aspx?sign=10", "https://www.horoscope.com/us/horoscopes/career/horoscope-career-monthly.aspx?sign=10", "http://horoscope.com/us/horoscopes/yearly/2020-horoscope-capricorn.aspx"],
+                "money" : ["https://www.horoscope.com/us/horoscopes/money/horoscope-money-weekly.aspx?sign=10"]       
             }
         ]
     },
@@ -147,10 +135,10 @@
         "zodiac": "pisces",
         "readings": [
             { 
-                "general": ["http://horoscope.com/us/horoscopes/general/horoscope-general-daily-today.aspx?sign=11", "http://horoscope.com/us/horoscopes/general/horoscope-general-weekly.aspx?sign=11", "http://horoscope.com/us/horoscopes/general/horoscope-general-monthly.aspx?sign=11", "http://horoscope.com/us/horoscopes/yearly/2020-horoscope-aquarius.aspx"],
-                "love" : ["https://www.horoscope.com/us/horoscopes/love/horoscope-love-daily-today.aspx?sign=11", "https://www.horoscope.com/us/horoscopes/love/horoscope-love-weekly-single.aspx?sign=11", "http://horoscope.com/us/horoscopes/love/horoscope-general-monthly.aspx?sign=11", "http://horoscope.com/us/horoscopes/yearly/2020-horoscope-aquarius.aspx"],
-                "career": ["https://www.horoscope.com/us/horoscopes/career/horoscope-career-daily-today.aspx?sign=11", "https://www.horoscope.com/us/horoscopes/career/horoscope-career-weekly.aspx?sign=11", "https://www.horoscope.com/us/horoscopes/career/horoscope-career-monthly.aspx?sign=11", "http://horoscope.com/us/horoscopes/yearly/2020-horoscope-aquarius.aspx"],
-                "money" : ["https://www.horoscope.com/us/horoscopes/money/horoscope-money-weekly.aspx?sign=11"]       
+                "general": ["http://horoscope.com/us/horoscopes/general/horoscope-general-daily-today.aspx?sign=12", "http://horoscope.com/us/horoscopes/general/horoscope-general-weekly.aspx?sign=12", "http://horoscope.com/us/horoscopes/general/horoscope-general-monthly.aspx?sign=12", "http://horoscope.com/us/horoscopes/yearly/2020-horoscope-pisces.aspx"],
+                "love" : ["https://www.horoscope.com/us/horoscopes/love/horoscope-love-daily-today.aspx?sign=12", "https://www.horoscope.com/us/horoscopes/love/horoscope-love-weekly-single.aspx?sign=12", "http://horoscope.com/us/horoscopes/love/horoscope-general-monthly.aspx?sign=12", "http://horoscope.com/us/horoscopes/yearly/2020-horoscope-pisces.aspx"],
+                "career": ["https://www.horoscope.com/us/horoscopes/career/horoscope-career-daily-today.aspx?sign=12", "https://www.horoscope.com/us/horoscopes/career/horoscope-career-weekly.aspx?sign=12", "https://www.horoscope.com/us/horoscopes/career/horoscope-career-monthly.aspx?sign=12", "http://horoscope.com/us/horoscopes/yearly/2020-horoscope-pisces.aspx"],
+                "money" : ["https://www.horoscope.com/us/horoscopes/money/horoscope-money-weekly.aspx?sign=12"]       
             }
         ]
     }
