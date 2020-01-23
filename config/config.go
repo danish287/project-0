@@ -17,7 +17,9 @@ var ReadingType string
 var ReadingFor string
 
 //CONFIGFILE stores the links where we get horoscopes
-const CONFIGFILE string = "../../conf.json"
+const CONFIGFILE string = "conf.json"
+
+//const CONFIGFILE string = "../../conf.json"
 
 //MyURL stores the URL we are trying to get
 var MyURL string

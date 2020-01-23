@@ -6,12 +6,25 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
     </head>
     <body>
-        <h1>Input Your Horoscope</h1>
+        <br>
+        <br>
+        <h3>Hi there, enter your zodiac sign to get your horoscope :)</h3>
         <!-- <a href="/horoscope">My HOROSCOPE</a> -->
 
         <form action="/horoscope" method="POST">
-            <input type="text" name="name" placeholder="Enter your name"/>
-            <button type="submit">Your name</button>
+            <input type="text" name="zod" placeholder="Enter your zodiac sign"/>
+            <input type="text" name="type" placeholder="When? (i.e daily, weekly..)"/>
+            <input type="text" name="reading" placeholder="Reading for.. (i.e career)"/>
+            <button type="submit">Enter</button>
         </form>
+
+        <!-- <form action="/horoscope" method="POST">
+            <input type="text" name="type" placeholder="Enter your name"/>
+            <button type="submit">Enter</button>
+        </form>
+        <form action="/horoscope" method="POST">
+            <input type="text" name="reading" placeholder="Enter your name"/>
+            <button type="submit">Enter</button>
+        </form> -->
     </body>
 </html>

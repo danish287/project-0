@@ -3,6 +3,9 @@ package main
 import (
 	"fmt"
 	"net/http"
+
+	"github.com/danish287/project-0/config"
+	"github.com/danish287/project-0/shaker"
 )
 
 // var tpl *template.Template
@@ -18,11 +21,19 @@ func main() {
 	//http.Handle("/", http.FileServer("../../web/*.html"))
 	//"../../web/*.html"
 	http.HandleFunc("/horoscope", func(w http.ResponseWriter, r *http.Request) {
-		var name = r.FormValue("name")
-		if name == "" {
-			name = "Anonymous NAME"
+		var myZodiac = r.FormValue("zod")
+		var myChooseType = r.FormValue("type")
+		var myChooseReading = r.FormValue("reading")
+		if myZodiac == "" || myChooseType == "" || myChooseReading == "" {
+			fmt.Fprint(w, "Please try again using valid arguments.")
+		} else {
+			//config.CONFIGFILE = "conf.json"
+			zodiacURL := shaker.GetZodiacURL(myZodiac, myChooseType, myChooseReading)
+			config.ReadingFor = myChooseReading
+			//fmt.Println("\n\n ", shaker.GetMyResponse(zodiacURL, config.ReadingFor))
+			fmt.Fprint(w, "\n\n ", shaker.GetMyResponse(zodiacURL, config.ReadingFor))
 		}
-		fmt.Fprint(w, name)
+
 	})
 	http.ListenAndServe(":8080", nil)
 
