@@ -9,36 +9,13 @@ import (
 	"strings"
 )
 
-//CONFIGFILE stores the links where we get horoscopes
-const CONFIGFILE string = "conf.json"
 
 //MyHoroscope stores the response for the requested horoscope
 var MyHoroscope string
 
-//MyURL stores the URL we are trying to get
-var MyURL string
 
 //myZodiac stores the zodiac user input
 var myZodiac string
-
-//LinkCluster derives Links from json file
-type LinkCluster struct {
-	General []string
-	Love    []string
-	Career  []string
-	Money   []string
-}
-
-//ZodiacCluster derives links from json file
-type ZodiacCluster struct {
-	Zodiac   string
-	Readings []LinkCluster
-}
-
-//Configuration derives links from json file
-type Configuration struct {
-	Links []ZodiacCluster
-}
 
 var linkList []string
 var output string
