@@ -4,7 +4,6 @@ import (
 	"fmt"
 
 	"github.com/danish287/project-0/shaker"
-	"github.com/danish287/project-0/config"
 )
 
 func main() {
