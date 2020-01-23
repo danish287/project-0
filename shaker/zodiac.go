@@ -7,6 +7,7 @@ import (
 	"net/http"
 	"os"
 	"strings"
+	"github.com/danish287/project-0/config"
 )
 
 
@@ -23,8 +24,7 @@ var output string
 //GetZodiacURL is a function that takes a string of integers and returns the first thing in the listt
 func GetZodiacURL(zodiac string, when string, myGenre string) string {
 	linkNum := GetType(when)
-	config := Configuration{}
-	myLink, err := os.Open(CONFIGFILE)
+	
 	myZodiac = zodiac
 	mySign := GetZodiac(zodiac)
 	wantedGenre := GetGenre(myGenre)
@@ -33,11 +33,7 @@ func GetZodiacURL(zodiac string, when string, myGenre string) string {
 		return "Please try again using valid arguments."
 	}
 
-	json.NewDecoder(myLink).Decode(&config)
-
-	if err != nil {
-		log.Fatal(err)
-	}
+	
 
 	if myGenre == "general" {
 

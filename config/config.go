@@ -46,8 +46,20 @@ type Configuration struct {
 
 
 func init() {
+
+	config := Configuration{}
+	myLink, err := os.Open(CONFIGFILE)
+	json.NewDecoder(myLink).Decode(&config)
+
+	if err != nil {
+		log.Fatal(err)
+	}
+	
 	flag.StringVar(&Zodiac, "Zodiac", "EMPTY", "name of the zodiac sign")
 	flag.StringVar(&ReadingFor, "ReadingFor", "daily", "time period of reading")
 	flag.StringVar(&ReadingType, "Type", "general", "type of reading")
 	flag.Parse()
+
+
+	
 }
